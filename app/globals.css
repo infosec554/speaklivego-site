@@ -377,3 +377,74 @@ a { color: inherit; text-decoration: none; }
   .duo .phone:first-child, .duo .phone:last-child { transform: none; }
   .header .btn { display: none; }
 }
+
+/* ─── Stats strip ────────────────────────────────────────────────────── */
+.statband { background: #fff; border-bottom: 1px solid var(--line); }
+.statband-in {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px; padding: 30px 0;
+}
+.statitem { text-align: center; padding: 6px; }
+.statitem b { display: block; font-size: 1.7rem; font-weight: 800; color: var(--blue); }
+.statitem span { color: var(--grey); font-size: 0.86rem; }
+
+/* ─── Split section ──────────────────────────────────────────────────── */
+.split {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 48px; align-items: center;
+}
+.split > * { min-width: 0; }
+.ticks { list-style: none; margin-top: 22px; }
+.ticks li {
+  position: relative; padding-left: 30px; margin-bottom: 12px;
+  color: var(--ink); font-size: 0.95rem;
+}
+.ticks li::before {
+  content: '✔'; position: absolute; left: 0; top: 0;
+  color: var(--green); font-weight: 800;
+}
+
+/* ─── Testimonials ───────────────────────────────────────────────────── */
+.quote {
+  background: #fff; border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 24px 22px;
+  display: flex; flex-direction: column; gap: 18px;
+}
+.quote p { color: var(--ink); font-size: 0.95rem; line-height: 1.6; }
+.qwho { display: flex; align-items: center; gap: 12px; }
+.qwho img { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; }
+.qwho b { display: block; font-size: 0.92rem; }
+.qwho span { color: var(--grey); font-size: 0.8rem; }
+
+/* ─── FAQ ────────────────────────────────────────────────────────────── */
+.faq { margin-top: 36px; max-width: 760px; }
+.faq details {
+  background: #fff; border: 1px solid var(--line);
+  border-radius: 14px; padding: 18px 20px; margin-bottom: 12px;
+}
+.faq summary {
+  cursor: pointer; font-weight: 600; font-size: 1rem;
+  list-style: none; position: relative; padding-right: 28px;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: '+'; position: absolute; right: 0; top: -2px;
+  font-size: 1.3rem; color: var(--blue); font-weight: 700;
+  transition: transform 0.2s;
+}
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { margin-top: 12px; color: var(--grey); font-size: 0.93rem; }
+
+/* ─── Legal pages ────────────────────────────────────────────────────── */
+.legal { max-width: 760px; margin: 0 auto; padding: 64px 0 96px; }
+.legal h1 { font-size: 2rem; font-weight: 800; margin-bottom: 6px; }
+.legal .upd { color: var(--grey-2); font-size: 0.85rem; margin-bottom: 34px; }
+.legal h2 { font-size: 1.15rem; font-weight: 700; margin: 30px 0 10px; }
+.legal p, .legal li { color: var(--grey); font-size: 0.95rem; line-height: 1.7; }
+.legal ul { padding-left: 22px; margin: 8px 0; }
+.legal a { color: var(--blue); }
+
+@media (max-width: 900px) {
+  .split { grid-template-columns: 1fr; }
+  .split .phones { order: 2; margin-top: 10px; }
+}

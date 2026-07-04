@@ -1,6 +1,18 @@
-const APK_URL = '/app.apk';
 const TELEGRAM_URL = 'https://t.me/speaklivego';
 const EMAIL = 'infosec554@gmail.com';
+
+/* Download is not public yet — buttons render without a link. */
+function Soon({ className, children }) {
+  return (
+    <span
+      className={className}
+      title="Coming soon"
+      style={{ cursor: 'default' }}
+    >
+      {children}
+    </span>
+  );
+}
 
 /* ── Realistic phone frame ────────────────────────────────────────────── */
 
@@ -229,9 +241,7 @@ export default function Home() {
               <span className="wm-go">Go</span>
             </span>
           </a>
-          <a className="btn btn-blue btn-sm" href={APK_URL}>
-            ⬇ Download
-          </a>
+          <Soon className="btn btn-blue btn-sm">⬇ Coming soon</Soon>
         </div>
       </header>
 
@@ -252,15 +262,13 @@ export default function Home() {
                 mistakes in your own language.
               </p>
               <div className="hero-ctas">
-                <a className="btn btn-white" href={APK_URL}>
-                  ⬇ Download APK
-                </a>
+                <Soon className="btn btn-white">⬇ Download — soon</Soon>
                 <a className="btn btn-ghost" href="#features">
                   See features
                 </a>
               </div>
               <div className="hero-note">
-                Free to start · Android (Google Play — coming soon)
+                Free to start · Android &amp; iOS — coming soon
               </div>
             </div>
 
@@ -271,6 +279,28 @@ export default function Home() {
               <Phone className="phone--front">
                 <LobbyScreen />
               </Phone>
+            </div>
+          </div>
+        </section>
+
+        {/* STATS STRIP */}
+        <section className="statband">
+          <div className="container statband-in">
+            <div className="statitem">
+              <b>660+</b>
+              <span>real IELTS speaking questions</span>
+            </div>
+            <div className="statitem">
+              <b>15 min</b>
+              <span>to get your AI band score</span>
+            </div>
+            <div className="statitem">
+              <b>1-on-1</b>
+              <span>live calls with real partners</span>
+            </div>
+            <div className="statitem">
+              <b>100%</b>
+              <span>free to start, every day</span>
             </div>
           </div>
         </section>
@@ -322,8 +352,34 @@ export default function Home() {
           </div>
         </section>
 
-        {/* AI COACH — two upright phones like the reference */}
+        {/* LIVE COMMUNITY SPLIT */}
         <section className="section alt">
+          <div className="container split">
+            <div className="phones" style={{ minHeight: 600 }}>
+              <Phone>
+                <LobbyScreen />
+              </Phone>
+            </div>
+            <div>
+              <div className="kicker">Live community</div>
+              <h2>Real people. Real conversations.</h2>
+              <p className="lead">
+                The lobby shows who&apos;s ready to talk right now. Filter by
+                level, gender and rating, tap once — and you&apos;re in a live
+                call. Every partner has a public rating, so great speakers are
+                easy to find.
+              </p>
+              <ul className="ticks">
+                <li>Green “Talk now” — partners searching this second</li>
+                <li>👍 ratings and talk counts on every profile</li>
+                <li>Block, report and friend controls built in</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* AI COACH — two upright phones */}
+        <section className="section">
           <div className="container" style={{ textAlign: 'center' }}>
             <div className="kicker">AI Coach</div>
             <h2>Know your IELTS band — in 15 minutes, free</h2>
@@ -339,9 +395,57 @@ export default function Home() {
                 <ResultScreen />
               </Phone>
             </div>
-            <a className="btn btn-blue" href={APK_URL}>
-              Try a free mock
-            </a>
+          </div>
+        </section>
+
+        {/* TESTIMONIALS */}
+        <section className="section alt">
+          <div className="container">
+            <div className="kicker">Early users</div>
+            <h2>What learners say</h2>
+            <div className="grid">
+              <div className="quote">
+                <p>
+                  “I took my first AI mock and got Band 5.5. Three weeks of
+                  daily calls later — 6.0. Seeing the number move keeps me
+                  going.”
+                </p>
+                <div className="qwho">
+                  <img src="/avatars/m3.jpg" alt="" />
+                  <div>
+                    <b>Jasur</b>
+                    <span>IELTS candidate, Tashkent</span>
+                  </div>
+                </div>
+              </div>
+              <div className="quote">
+                <p>
+                  “The AI tutor corrects me in Uzbek, so I actually understand
+                  my mistakes. It feels like a patient teacher who is never
+                  tired.”
+                </p>
+                <div className="qwho">
+                  <img src="/avatars/w2.jpg" alt="" />
+                  <div>
+                    <b>Madina</b>
+                    <span>University student</span>
+                  </div>
+                </div>
+              </div>
+              <div className="quote">
+                <p>
+                  “I was scared to talk to strangers. The ratings helped me find
+                  kind partners — now I speak every evening after work.”
+                </p>
+                <div className="qwho">
+                  <img src="/avatars/m1.jpg" alt="" />
+                  <div>
+                    <b>Bekzod</b>
+                    <span>Software engineer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -378,14 +482,71 @@ export default function Home() {
           </div>
         </section>
 
+        {/* FAQ */}
+        <section className="section alt" id="faq">
+          <div className="container">
+            <div className="kicker">FAQ</div>
+            <h2>Frequently asked questions</h2>
+            <div className="faq">
+              <details>
+                <summary>Is Speak Live Go really free?</summary>
+                <p>
+                  Yes — live calls, one AI speaking mock per day and the AI
+                  tutor are free. A Premium plan with unlimited AI practice is
+                  coming later.
+                </p>
+              </details>
+              <details>
+                <summary>How accurate is the AI band score?</summary>
+                <p>
+                  The AI examiner follows the official IELTS speaking criteria
+                  (fluency &amp; coherence, lexical resource, grammatical
+                  range) and is calibrated on real examiner rubrics. Treat it
+                  as a strong practice estimate — the more mocks you take, the
+                  clearer your trend.
+                </p>
+              </details>
+              <details>
+                <summary>I&apos;m a beginner — can I still use it?</summary>
+                <p>
+                  Absolutely. Set your level during onboarding and the app
+                  matches you with partners at a similar level. The AI tutor
+                  also adapts its vocabulary to you and explains mistakes in
+                  your native language.
+                </p>
+              </details>
+              <details>
+                <summary>What about bad behaviour on calls?</summary>
+                <p>
+                  Every profile has a public rating, and block &amp; report
+                  tools are one tap away. Blocked users can never call or
+                  message you again.
+                </p>
+              </details>
+              <details>
+                <summary>When can I download it?</summary>
+                <p>
+                  We&apos;re finishing the final polish. Follow{' '}
+                  <a href={TELEGRAM_URL} style={{ color: 'var(--blue)' }}>
+                    @speaklivego on Telegram
+                  </a>{' '}
+                  — the download link will be published there first.
+                </p>
+              </details>
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="section" style={{ paddingTop: 0 }}>
           <div className="container">
             <div className="cta">
               <h2>Start speaking today — it&apos;s free</h2>
-              <p>Your first AI mock and your first conversation are waiting.</p>
-              <a className="btn btn-white" href={APK_URL}>
-                ⬇ Download Speak Live Go
+              <p>
+                Your first AI mock and your first conversation are waiting.
+              </p>
+              <a className="btn btn-white" href={TELEGRAM_URL}>
+                ✈ Follow @speaklivego
               </a>
             </div>
           </div>
@@ -404,9 +565,10 @@ export default function Home() {
           <div className="links">
             <a href={TELEGRAM_URL}>Telegram</a>
             <a href={`mailto:${EMAIL}`}>Contact</a>
-            <a href={APK_URL}>Download</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Use</a>
           </div>
-          <small>© {new Date().getFullYear()} Speak Live Go</small>
+          <small>© 2023 Speak Live Go</small>
         </div>
       </footer>
     </>
