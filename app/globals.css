@@ -25,6 +25,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   font-family:
     'Poppins',
     -apple-system,
@@ -140,6 +141,11 @@ a {
   align-items: center;
   padding: 72px 0 88px;
 }
+
+/* grid items must be allowed to shrink below their content width,
+   otherwise the fixed-width phones force horizontal overflow on mobile */
+.hero-in > * { min-width: 0; }
+.phones { max-width: 100%; }
 
 .hero h1 {
   font-size: clamp(2rem, 4.2vw, 3.1rem);
@@ -604,9 +610,10 @@ a {
 }
 
 @media (max-width: 560px) {
-  .phones { min-height: 430px; }
-  .phone { width: 205px; }
-  .phone--back { transform: rotate(-7deg) translate(46px, 22px) scale(0.92); }
-  .phone--front { transform: rotate(4deg) translate(-30px, 0); }
+  .phones { min-height: 360px; }
+  .phone { width: 168px; }
+  .phone--back { transform: rotate(-7deg) translate(36px, 18px) scale(0.92); }
+  .phone--front { transform: rotate(4deg) translate(-22px, 0); }
   .header .btn { display: none; }
+  .phone-body { padding: 8px 9px 10px; }
 }
