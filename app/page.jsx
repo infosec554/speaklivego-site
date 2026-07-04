@@ -1,17 +1,60 @@
-const APK_URL =
-  'https://github.com/infosec554/speaklivvego-flutter/releases/download/apk-latest/app-release.apk';
+const APK_URL = '/app.apk';
 const TELEGRAM_URL = 'https://t.me/speaklivego';
 const EMAIL = 'infosec554@gmail.com';
 
-/* ── 2D mini-screens (recreated from the real app, not screenshots) ──── */
+/* ── Realistic phone frame ────────────────────────────────────────────── */
+
+function StatusBar() {
+  return (
+    <div className="sbar">
+      <span>9:41</span>
+      <span className="sicons">
+        <span className="sig">
+          <i />
+          <i />
+          <i />
+          <i />
+        </span>
+        <svg width="14" height="11" viewBox="0 0 16 12" fill="none">
+          <path
+            d="M8 9.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM3.5 7.2a6.5 6.5 0 0 1 9 0l-1.6 1.6a4.2 4.2 0 0 0-5.8 0L3.5 7.2zM.8 4.4a10.4 10.4 0 0 1 14.4 0l-1.6 1.6a8.1 8.1 0 0 0-11.2 0L.8 4.4z"
+            fill="#0c092a"
+          />
+        </svg>
+        <span className="batt" />
+      </span>
+    </div>
+  );
+}
+
+function Phone({ children, className = '' }) {
+  return (
+    <div className={`phone ${className}`}>
+      <div className="screen">
+        <div className="island" />
+        <StatusBar />
+        {children}
+      </div>
+    </div>
+  );
+}
+
+/* ── App screens (faithful recreations) ───────────────────────────────── */
 
 function LobbyScreen() {
   return (
     <div className="phone-body">
-      <div className="m-title">Ready to talk now</div>
+      <div className="appbar">
+        Lobby
+        <span className="rgt">⛭</span>
+      </div>
+      <div className="h-sec">Ready to talk now</div>
       <div className="m-cards">
         <div className="m-card">
-          <div className="av av-1">S</div>
+          <div className="avwrap">
+            <img className="av" src="/avatars/w1.jpg" alt="" />
+            <span className="flagdot">🇺🇸</span>
+          </div>
           <div className="nm">Sophia</div>
           <div className="st">
             👍 <b>100%</b> · Female
@@ -19,7 +62,10 @@ function LobbyScreen() {
           <div className="talk">Talk now</div>
         </div>
         <div className="m-card">
-          <div className="av av-2">L</div>
+          <div className="avwrap">
+            <img className="av" src="/avatars/m1.jpg" alt="" />
+            <span className="flagdot">🇬🇧</span>
+          </div>
           <div className="nm">Liam</div>
           <div className="st">
             👍 <b>96%</b> · Male
@@ -27,30 +73,73 @@ function LobbyScreen() {
           <div className="talk">Talk now</div>
         </div>
       </div>
-      <div className="m-title" style={{ marginTop: 12 }}>
-        Invite online partners
+
+      <div className="refresh-line">
+        <div className="h-sec" style={{ margin: 0 }}>
+          Invite online partners
+        </div>
+        <div className="refresh-pill">⟳ Refresh</div>
       </div>
+
       <div className="m-row">
-        <div className="av av-1">A</div>
+        <div>
+          <div className="avwrap">
+            <img className="av" src="/avatars/w2.jpg" alt="" />
+            <span className="flagdot">🇮🇳</span>
+          </div>
+          <div className="under on">• online</div>
+        </div>
         <div className="info">
-          <div className="nm">Aziza</div>
+          <div className="nm">Aaradhya</div>
           <div className="st">
             👍 <b>98%</b> · Female · C1 · 312 talks
           </div>
         </div>
-        <div className="m-act">✆</div>
+        <div>
+          <div className="m-act">✆</div>
+          <div className="m-act-l">CALL</div>
+        </div>
       </div>
+
       <div className="m-row">
-        <div className="av av-2">J</div>
+        <div>
+          <div className="avwrap">
+            <img className="av" src="/avatars/m2.jpg" alt="" />
+            <span className="flagdot">🇹🇷</span>
+          </div>
+          <div className="under">offline</div>
+        </div>
         <div className="info">
-          <div className="nm">Jasur</div>
+          <div className="nm">Efe</div>
           <div className="st">
             👍 <b>94%</b> · Male · B2 · 158 talks
           </div>
         </div>
-        <div className="m-act">✆</div>
+        <div>
+          <div className="m-act">🗨</div>
+          <div className="m-act-l">MESSAGE</div>
+        </div>
       </div>
+
       <div className="m-find">✦ Find a perfect partner</div>
+
+      <div className="m-nav">
+        <div className="it act">
+          <span className="ic">⌂</span>Lobby
+        </div>
+        <div className="it">
+          <span className="ic">🗨</span>Chats
+        </div>
+        <div className="it">
+          <span className="ai">✦</span>AI Coach
+        </div>
+        <div className="it">
+          <span className="ic">🏆</span>Ranking
+        </div>
+        <div className="it">
+          <span className="ic">☺</span>Profile
+        </div>
+      </div>
     </div>
   );
 }
@@ -58,8 +147,14 @@ function LobbyScreen() {
 function TutorScreen() {
   return (
     <div className="phone-body">
+      <div className="appbar">
+        <span className="lft">‹</span>
+        Sophia
+        <span className="rgt">⚙</span>
+      </div>
       <div className="t-photo">
-        <div className="face">👩‍🏫</div>
+        <img src="/avatars/w3.jpg" alt="" />
+        <div className="shade" />
         <div className="spk">〰 Speaking…</div>
         <div className="tag">Sophia · 🔊 Australian</div>
       </div>
@@ -67,11 +162,12 @@ function TutorScreen() {
         Hi! I&apos;m Sophia, your English tutor. What would you like to talk
         about today?
       </div>
-      <div className="bubble me">I goed to market yesterday</div>
+      <div className="bubble me">I goed to the market yesterday</div>
       <div className="bubble tip">
-        💡 &quot;goed&quot; emas — &quot;went&quot; bo&apos;ladi: “I went to the
-        market yesterday.”
+        💡 &quot;goed&quot; emas — to&apos;g&apos;risi &quot;went&quot;: “I
+        went to the market yesterday.”
       </div>
+      <div className="hintchip">💡 What to say?</div>
       <div className="t-bar">
         <div className="side">⌨</div>
         <div className="mic">🎙</div>
@@ -81,10 +177,13 @@ function TutorScreen() {
   );
 }
 
-function BandScreen() {
+function ResultScreen() {
   return (
     <div className="phone-body">
-      <div className="m-title">Your result</div>
+      <div className="appbar">
+        <span className="lft">‹</span>
+        Your result
+      </div>
       <div className="band">
         <div className="lbl">Overall band</div>
         <div className="val">6.5</div>
@@ -98,23 +197,20 @@ function BandScreen() {
         <b>6.0</b>
       </div>
       <div className="crit">
-        <span>Grammar accuracy</span>
+        <span>Grammatical range</span>
         <b>7.0</b>
       </div>
-      <div className="m-find" style={{ marginTop: 10 }}>
-        Try again tomorrow — free
+      <div className="goodline">
+        <span className="gi">✔</span>
+        <span>Clear structure and confident delivery in Part 2</span>
       </div>
-    </div>
-  );
-}
-
-function Phone({ children, variant }) {
-  return (
-    <div className={`phone phone--${variant}`}>
-      <div className="notch">
-        <i />
+      <div className="goodline">
+        <span className="gi">✔</span>
+        <span>Good range of linking words</span>
       </div>
-      {children}
+      <div className="m-find" style={{ marginTop: 12 }}>
+        One free mock every day
+      </div>
     </div>
   );
 }
@@ -169,10 +265,10 @@ export default function Home() {
             </div>
 
             <div className="phones">
-              <Phone variant="back">
+              <Phone className="phone--back">
                 <TutorScreen />
               </Phone>
-              <Phone variant="front">
+              <Phone className="phone--front">
                 <LobbyScreen />
               </Phone>
             </div>
@@ -226,36 +322,26 @@ export default function Home() {
           </div>
         </section>
 
-        {/* AI COACH SPLIT */}
+        {/* AI COACH — two upright phones like the reference */}
         <section className="section alt">
-          <div
-            className="container"
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-              gap: 48,
-              alignItems: 'center',
-            }}
-          >
-            <div>
-              <div className="kicker">AI Coach</div>
-              <h2>Know your IELTS band — in 15 minutes, free</h2>
-              <p className="lead">
-                Part 1, cue card, Part 3 — exactly like the real exam. Instant
-                band score, strengths, corrections and advice. One free mock
-                every day.
-              </p>
-              <div style={{ marginTop: 26 }}>
-                <a className="btn btn-blue" href={APK_URL}>
-                  Try a free mock
-                </a>
-              </div>
-            </div>
-            <div className="phones" style={{ minHeight: 480 }}>
-              <Phone variant="front">
-                <BandScreen />
+          <div className="container" style={{ textAlign: 'center' }}>
+            <div className="kicker">AI Coach</div>
+            <h2>Know your IELTS band — in 15 minutes, free</h2>
+            <p className="lead" style={{ margin: '0 auto' }}>
+              Part 1, cue card, Part 3 — exactly like the real exam. Instant
+              band score, corrections and advice. One free mock every day.
+            </p>
+            <div className="duo" style={{ marginTop: 48 }}>
+              <Phone>
+                <TutorScreen />
+              </Phone>
+              <Phone>
+                <ResultScreen />
               </Phone>
             </div>
+            <a className="btn btn-blue" href={APK_URL}>
+              Try a free mock
+            </a>
           </div>
         </section>
 
@@ -306,7 +392,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="footer" style={{ marginTop: 0 }}>
+      <footer className="footer">
         <div className="container footer-in">
           <a href="#top" className="brand">
             <img src="/logo.png" alt="Speak Live Go" />
