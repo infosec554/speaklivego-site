@@ -241,6 +241,11 @@ export default function Home() {
               <span className="wm-go">Go</span>
             </span>
           </a>
+          <nav className="nav">
+            <a href="#features">Features</a>
+            <a href="#coach">AI Coach</a>
+            <a href="#faq">FAQ</a>
+          </nav>
           <Soon className="btn btn-blue btn-sm">⬇ Coming soon</Soon>
         </div>
       </header>
@@ -250,11 +255,12 @@ export default function Home() {
         <section className="hero">
           <div className="container hero-in">
             <div>
+              <div className="hero-badge">
+                <b>NEW</b> AI Coach — IELTS band score in 15 minutes
+              </div>
               <h1>
-                Practice English.
-                <br />
-                Speak with <span className="hl-g">confidence</span> —{' '}
-                <span className="hl">every day</span>.
+                Practice English. Speak with{' '}
+                <span className="gword">confidence</span> — every day.
               </h1>
               <p className="sub">
                 Talk to real people around the world, take AI-scored IELTS
@@ -267,8 +273,18 @@ export default function Home() {
                   See features
                 </a>
               </div>
-              <div className="hero-note">
-                Free to start · Android &amp; iOS — coming soon
+              <div className="trust">
+                <div className="avs">
+                  <img src="/avatars/w1.jpg" alt="" />
+                  <img src="/avatars/m1.jpg" alt="" />
+                  <img src="/avatars/w2.jpg" alt="" />
+                  <img src="/avatars/m3.jpg" alt="" />
+                </div>
+                <p>
+                  <b>Early learners are already talking.</b>
+                  <br />
+                  Free to start · Android &amp; iOS — coming soon
+                </p>
               </div>
             </div>
 
@@ -307,16 +323,18 @@ export default function Home() {
 
         {/* FEATURES */}
         <section className="section" id="features">
-          <div className="container">
-            <div className="kicker">Why Speak Live Go</div>
+          <div className="container center">
+            <span className="eyebrow">Why Speak Live Go</span>
             <h2>Everything you need to start speaking</h2>
             <p className="lead">
               One app — live partners, an AI examiner and an AI tutor. No
               schedules, no expensive lessons.
             </p>
-            <div className="grid">
+            <div className="grid" style={{ textAlign: "left" }}>
               <div className="feature">
-                <div className="ic">📞</div>
+                <div className="ic">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
                 <h3>Live 1-on-1 calls</h3>
                 <p>
                   Find a partner by level, gender and rating — and just talk.
@@ -324,7 +342,9 @@ export default function Home() {
                 </p>
               </div>
               <div className="feature">
-                <div className="ic g">🎤</div>
+                <div className="ic g">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+                </div>
                 <h3>AI Speaking Mock</h3>
                 <p>
                   A full IELTS-style speaking test: the examiner reads the
@@ -333,7 +353,9 @@ export default function Home() {
                 </p>
               </div>
               <div className="feature">
-                <div className="ic">🤖</div>
+                <div className="ic">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8"/><path d="M8 13h5"/></svg>
+                </div>
                 <h3>AI Tutor</h3>
                 <p>
                   Talk or type with a friendly tutor that replies by voice and
@@ -341,7 +363,9 @@ export default function Home() {
                 </p>
               </div>
               <div className="feature">
-                <div className="ic g">🏆</div>
+                <div className="ic g">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+                </div>
                 <h3>Rating &amp; community</h3>
                 <p>
                   Earn 👍 from partners, climb the leaderboard and build a
@@ -353,7 +377,7 @@ export default function Home() {
         </section>
 
         {/* LIVE COMMUNITY SPLIT */}
-        <section className="section alt">
+        <section className="section ice">
           <div className="container split">
             <div className="phones" style={{ minHeight: 600 }}>
               <Phone>
@@ -361,7 +385,7 @@ export default function Home() {
               </Phone>
             </div>
             <div>
-              <div className="kicker">Live community</div>
+              <span className="eyebrow">Live community</span>
               <h2>Real people. Real conversations.</h2>
               <p className="lead">
                 The lobby shows who&apos;s ready to talk right now. Filter by
@@ -378,16 +402,40 @@ export default function Home() {
           </div>
         </section>
 
-        {/* AI COACH — two upright phones */}
-        <section className="section">
-          <div className="container" style={{ textAlign: 'center' }}>
-            <div className="kicker">AI Coach</div>
-            <h2>Know your IELTS band — in 15 minutes, free</h2>
+        {/* AI COACH — dark stage */}
+        <section className="stage" id="coach">
+          <div className="container center">
+            <span className="eyebrow on-dark">AI Coach</span>
+            <h2>
+              Know your IELTS band —{' '}
+              <span className="gword">in 15 minutes</span>, free
+            </h2>
             <p className="lead" style={{ margin: '0 auto' }}>
               Part 1, cue card, Part 3 — exactly like the real exam. Instant
               band score, corrections and advice. One free mock every day.
             </p>
-            <div className="duo" style={{ marginTop: 48 }}>
+            <div className="duo">
+              <div className="chip-float chip-a">
+                <span className="dot">🎯</span>
+                <span>
+                  Band 6.5
+                  <small>+0.5 this month</small>
+                </span>
+              </div>
+              <div className="chip-float chip-b">
+                <span className="dot">💡</span>
+                <span>
+                  Corrected in Uzbek
+                  <small>“goed” → “went”</small>
+                </span>
+              </div>
+              <div className="chip-float chip-c">
+                <span className="dot">🔊</span>
+                <span>
+                  Examiner reads aloud
+                  <small>you just speak</small>
+                </span>
+              </div>
               <Phone>
                 <TutorScreen />
               </Phone>
@@ -399,12 +447,13 @@ export default function Home() {
         </section>
 
         {/* TESTIMONIALS */}
-        <section className="section alt">
-          <div className="container">
-            <div className="kicker">Early users</div>
+        <section className="section ice">
+          <div className="container center">
+            <span className="eyebrow">Early users</span>
             <h2>What learners say</h2>
-            <div className="grid">
+            <div className="grid" style={{ textAlign: "left" }}>
               <div className="quote">
+                <div className="stars">★★★★★</div>
                 <p>
                   “I took my first AI mock and got Band 5.5. Three weeks of
                   daily calls later — 6.0. Seeing the number move keeps me
@@ -419,6 +468,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="quote">
+                <div className="stars">★★★★★</div>
                 <p>
                   “The AI tutor corrects me in Uzbek, so I actually understand
                   my mistakes. It feels like a patient teacher who is never
@@ -433,6 +483,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="quote">
+                <div className="stars">★★★★★</div>
                 <p>
                   “I was scared to talk to strangers. The ratings helped me find
                   kind partners — now I speak every evening after work.”
@@ -451,8 +502,8 @@ export default function Home() {
 
         {/* HOW IT WORKS */}
         <section className="section">
-          <div className="container">
-            <div className="kicker">How it works</div>
+          <div className="container center">
+            <span className="eyebrow">How it works</span>
             <h2>Three steps to fluent speaking</h2>
             <div className="steps">
               <div className="step">
@@ -483,11 +534,11 @@ export default function Home() {
         </section>
 
         {/* FAQ */}
-        <section className="section alt" id="faq">
-          <div className="container">
-            <div className="kicker">FAQ</div>
+        <section className="section ice" id="faq">
+          <div className="container center">
+            <span className="eyebrow">FAQ</span>
             <h2>Frequently asked questions</h2>
-            <div className="faq">
+            <div className="faq" style={{ textAlign: "left" }}>
               <details>
                 <summary>Is Speak Live Go really free?</summary>
                 <p>
@@ -554,21 +605,39 @@ export default function Home() {
       </main>
 
       <footer className="footer">
-        <div className="container footer-in">
-          <a href="#top" className="brand">
-            <img src="/logo.png" alt="Speak Live Go" />
-            <span>
-              Speak <span className="wm-live">Live</span>
-              <span className="wm-go">Go</span>
-            </span>
-          </a>
-          <div className="links">
-            <a href={TELEGRAM_URL}>Telegram</a>
-            <a href={`mailto:${EMAIL}`}>Contact</a>
-            <a href="/privacy">Privacy Policy</a>
-            <a href="/terms">Terms of Use</a>
+        <div className="container">
+          <div className="footer-grid">
+            <div>
+              <a href="#top" className="brand">
+                <img src="/logo.png" alt="Speak Live Go" />
+                <span>
+                  Speak <span className="wm-live">Live</span>
+                  <span className="wm-go">Go</span>
+                </span>
+              </a>
+              <p className="tagline">
+                Live English speaking practice with real people — plus an AI
+                examiner and tutor in your pocket.
+              </p>
+            </div>
+            <div className="fcol">
+              <h4>Product</h4>
+              <a href="#features">Features</a>
+              <a href="#coach">AI Coach</a>
+              <a href="#faq">FAQ</a>
+            </div>
+            <div className="fcol">
+              <h4>Contact</h4>
+              <a href={TELEGRAM_URL}>Telegram — @speaklivego</a>
+              <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+              <a href="/privacy">Privacy Policy</a>
+              <a href="/terms">Terms of Use</a>
+            </div>
           </div>
-          <small>© 2023 Speak Live Go</small>
+          <div className="footer-bar">
+            <span>© 2023 Speak Live Go. All rights reserved.</span>
+            <span>Made for English learners, everywhere.</span>
+          </div>
         </div>
       </footer>
     </>
