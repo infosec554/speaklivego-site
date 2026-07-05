@@ -65,7 +65,7 @@ function LobbyScreen() {
         <div className="m-card">
           <div className="avwrap">
             <img className="av" src="/avatars/w1.jpg" alt="" />
-            <span className="flagdot">🇺🇸</span>
+            <img className="flagdot" src="/flags/us.png" alt="" />
           </div>
           <div className="nm">Sophia</div>
           <div className="st">
@@ -76,7 +76,7 @@ function LobbyScreen() {
         <div className="m-card">
           <div className="avwrap">
             <img className="av" src="/avatars/m1.jpg" alt="" />
-            <span className="flagdot">🇬🇧</span>
+            <img className="flagdot" src="/flags/gb.png" alt="" />
           </div>
           <div className="nm">Liam</div>
           <div className="st">
@@ -97,7 +97,7 @@ function LobbyScreen() {
         <div>
           <div className="avwrap">
             <img className="av" src="/avatars/w2.jpg" alt="" />
-            <span className="flagdot">🇮🇳</span>
+            <img className="flagdot" src="/flags/in.png" alt="" />
           </div>
           <div className="under on">• online</div>
         </div>
@@ -117,7 +117,7 @@ function LobbyScreen() {
         <div>
           <div className="avwrap">
             <img className="av" src="/avatars/m2.jpg" alt="" />
-            <span className="flagdot">🇹🇷</span>
+            <img className="flagdot" src="/flags/tr.png" alt="" />
           </div>
           <div className="under">offline</div>
         </div>
@@ -168,7 +168,10 @@ function TutorScreen() {
         <img src="/avatars/w3.jpg" alt="" />
         <div className="shade" />
         <div className="spk">〰 Speaking…</div>
-        <div className="tag">Sophia · 🔊 Australian</div>
+        <div className="tag">
+          Sophia · <img className="tagflag" src="/flags/au.png" alt="" />{' '}
+          Australian
+        </div>
       </div>
       <div className="bubble">
         Hi! I&apos;m Sophia, your English tutor. What would you like to talk
@@ -222,6 +225,46 @@ function ResultScreen() {
       </div>
       <div className="m-find" style={{ marginTop: 12 }}>
         One free mock every day
+      </div>
+    </div>
+  );
+}
+
+function MockScreen() {
+  return (
+    <div className="phone-body">
+      <div className="appbar">
+        <span className="lft">‹</span>
+        Speaking Mock
+        <span className="rgt">01:32</span>
+      </div>
+      <div className="mk-part">Part 2 · Cue card</div>
+      <div className="mk-card">
+        <b>Describe a person who inspires you.</b>
+        <ul>
+          <li>who this person is</li>
+          <li>how you know them</li>
+          <li>why they inspire you</li>
+        </ul>
+      </div>
+      <div className="mk-read">
+        <span className="dot">🔊</span>
+        <div>
+          <b>Examiner is reading aloud…</b>
+          <div className="wave">
+            <i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i />
+            <i /><i /><i /><i />
+          </div>
+        </div>
+      </div>
+      <div className="mk-you">
+        <span className="rec" />
+        Recording your answer… <b>0:47</b>
+      </div>
+      <div className="t-bar">
+        <div className="side">⏸</div>
+        <div className="mic">🎙</div>
+        <div className="side">➔</div>
       </div>
     </div>
   );
@@ -437,7 +480,7 @@ export default function Home() {
                 </span>
               </div>
               <Phone>
-                <TutorScreen />
+                <MockScreen />
               </Phone>
               <Phone>
                 <ResultScreen />
