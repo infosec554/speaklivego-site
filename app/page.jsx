@@ -57,7 +57,7 @@ function LobbyScreen() {
   return (
     <div className="phone-body">
       <div className="appbar">
-        Lobby
+        Talk
         <span className="rgt">⛭</span>
       </div>
       <div className="h-sec">Ready to talk now</div>
@@ -137,7 +137,7 @@ function LobbyScreen() {
 
       <div className="m-nav">
         <div className="it act">
-          <span className="ic">⌂</span>Lobby
+          <span className="ic">⌂</span>Talk
         </div>
         <div className="it">
           <span className="ic">🗨</span>Chats
@@ -431,10 +431,10 @@ export default function Home() {
               <span className="eyebrow">Live community</span>
               <h2>Real people. Real conversations.</h2>
               <p className="lead">
-                The lobby shows who&apos;s ready to talk right now. Filter by
-                level, gender and rating, tap once — and you&apos;re in a live
-                call. Every partner has a public rating, so great speakers are
-                easy to find.
+                The Talk tab shows who&apos;s ready to speak right now. Filter
+                by level, gender and rating, tap once — and you&apos;re in a
+                live call. Every partner has a public rating, so great speakers
+                are easy to find.
               </p>
               <ul className="ticks">
                 <li>Green “Talk now” — partners searching this second</li>
@@ -582,51 +582,88 @@ export default function Home() {
             <span className="eyebrow">FAQ</span>
             <h2>Frequently asked questions</h2>
             <div className="faq" style={{ textAlign: "left" }}>
-              <details>
+              <details open>
                 <summary>Is Speak Live Go really free?</summary>
                 <p>
-                  Yes — live calls, one AI speaking mock per day and the AI
-                  tutor are free. A Premium plan with unlimited AI practice is
-                  coming later.
+                  Yes. Live 1-on-1 calls are unlimited and free. The AI Coach
+                  gives you one full IELTS speaking mock every day and a daily
+                  AI-tutor allowance — also free. A Premium plan with unlimited
+                  AI practice will come later, but the core of the app stays
+                  free.
                 </p>
               </details>
               <details>
                 <summary>How accurate is the AI band score?</summary>
                 <p>
-                  The AI examiner follows the official IELTS speaking criteria
-                  (fluency &amp; coherence, lexical resource, grammatical
-                  range) and is calibrated on real examiner rubrics. Treat it
-                  as a strong practice estimate — the more mocks you take, the
-                  clearer your trend.
+                  The AI examiner scores you on the official IELTS speaking
+                  criteria — fluency &amp; coherence, lexical resource and
+                  grammatical range — and explains exactly what held your band
+                  down. Treat a single mock as a strong practice estimate; take
+                  one every day and the <b>trend</b> becomes very reliable.
+                </p>
+              </details>
+              <details>
+                <summary>Do I need to schedule lessons?</summary>
+                <p>
+                  No — that&apos;s the point. Open the Talk tab and you see who
+                  is ready to speak <b>this second</b>: tap once and
+                  you&apos;re in a call. No bookings, no calendars, no
+                  waiting for a teacher. The AI Coach is awake 24/7 too.
                 </p>
               </details>
               <details>
                 <summary>I&apos;m a beginner — can I still use it?</summary>
                 <p>
-                  Absolutely. Set your level during onboarding and the app
-                  matches you with partners at a similar level. The AI tutor
-                  also adapts its vocabulary to you and explains mistakes in
-                  your native language.
+                  Absolutely. You set your level (A1–C2) during onboarding and
+                  the app matches you with partners at a similar level, so
+                  nobody feels judged. The AI tutor adapts its vocabulary to
+                  you, corrects gently and explains every mistake in your
+                  native language.
+                </p>
+              </details>
+              <details>
+                <summary>Which languages does the AI tutor explain in?</summary>
+                <p>
+                  Your own. Pick your native language during onboarding —
+                  Uzbek, Russian, Turkish, Hindi, Arabic, Spanish and more —
+                  and every correction comes with an explanation in that
+                  language, so you understand <b>why</b> it was wrong, not just
+                  what to say instead.
+                </p>
+              </details>
+              <details>
+                <summary>How do partner ratings work?</summary>
+                <p>
+                  After every call both sides leave quick feedback. Each
+                  profile shows a public 👍 percentage and a talk count, so you
+                  can see at a glance who is friendly, patient and worth
+                  calling. Great speakers rise; rude ones don&apos;t get calls.
                 </p>
               </details>
               <details>
                 <summary>What about bad behaviour on calls?</summary>
                 <p>
-                  Every profile has a public rating, and block &amp; report
-                  tools are one tap away. Blocked users can never call or
-                  message you again.
+                  Three layers of protection: public ratings make bad actors
+                  visible, <b>Block</b> and <b>Report</b> are one tap away
+                  during and after any call, and blocked users can never call
+                  or message you again. Repeat offenders are banned.
                 </p>
               </details>
               <details>
                 <summary>When can I download it?</summary>
                 <p>
-                  We&apos;re finishing the final polish. Follow{' '}
-                  <a href={TELEGRAM_URL} style={{ color: 'var(--blue)' }}>
-                    @speaklivego on Telegram
-                  </a>{' '}
-                  — the download link will be published there first.
+                  We&apos;re finishing the final polish before the store
+                  release. Follow{' '}
+                  <a href={TELEGRAM_URL}>@speaklivego on Telegram</a> — the
+                  download link will be published there first, and early
+                  followers get their profiles in before everyone else.
                 </p>
               </details>
+              <p className="faq-more">
+                Still have questions? Write to us —{' '}
+                <a href={TELEGRAM_URL}>@speaklivego</a> on Telegram or{' '}
+                <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
+              </p>
             </div>
           </div>
         </section>
