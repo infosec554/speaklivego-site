@@ -64,7 +64,7 @@ function LobbyScreen() {
       <div className="m-cards">
         <div className="m-card">
           <div className="avwrap">
-            <img className="av" src="/avatars/w1.jpg" alt="" />
+            <img className="av" src="/avatars/sophia.jpg" alt="" />
             <img className="flagdot" src="/flags/us.png" alt="" />
           </div>
           <div className="nm">Sophia</div>
@@ -75,7 +75,7 @@ function LobbyScreen() {
         </div>
         <div className="m-card">
           <div className="avwrap">
-            <img className="av" src="/avatars/m1.jpg" alt="" />
+            <img className="av" src="/avatars/liam.jpg" alt="" />
             <img className="flagdot" src="/flags/gb.png" alt="" />
           </div>
           <div className="nm">Liam</div>
@@ -96,7 +96,7 @@ function LobbyScreen() {
       <div className="m-row">
         <div>
           <div className="avwrap">
-            <img className="av" src="/avatars/w2.jpg" alt="" />
+            <img className="av" src="/avatars/maya.jpg" alt="" />
             <img className="flagdot" src="/flags/in.png" alt="" />
           </div>
           <div className="under on">• online</div>
@@ -116,7 +116,7 @@ function LobbyScreen() {
       <div className="m-row">
         <div>
           <div className="avwrap">
-            <img className="av" src="/avatars/m2.jpg" alt="" />
+            <img className="av" src="/avatars/efe.jpg" alt="" />
             <img className="flagdot" src="/flags/tr.png" alt="" />
           </div>
           <div className="under">offline</div>
@@ -165,7 +165,7 @@ function TutorScreen() {
         <span className="rgt">⚙</span>
       </div>
       <div className="t-photo">
-        <img src="/avatars/w3.jpg" alt="" />
+        <img src="/avatars/tutor.jpg" alt="" />
         <div className="shade" />
         <div className="spk">〰 Speaking…</div>
         <div className="tag">
@@ -318,10 +318,10 @@ export default function Home() {
               </div>
               <div className="trust">
                 <div className="avs">
-                  <img src="/avatars/w1.jpg" alt="" />
-                  <img src="/avatars/m1.jpg" alt="" />
-                  <img src="/avatars/w2.jpg" alt="" />
-                  <img src="/avatars/m3.jpg" alt="" />
+                  <img src="/avatars/sophia.jpg" alt="" />
+                  <img src="/avatars/liam.jpg" alt="" />
+                  <img src="/avatars/maya.jpg" alt="" />
+                  <img src="/avatars/daniel.jpg" alt="" />
                 </div>
                 <p>
                   <b>Early learners are already talking.</b>
@@ -503,7 +503,7 @@ export default function Home() {
                   going.”
                 </p>
                 <div className="qwho">
-                  <img src="/avatars/m3.jpg" alt="" />
+                  <img src="/avatars/daniel.jpg" alt="" />
                   <div>
                     <b>Jasur</b>
                     <span>IELTS candidate, Tashkent</span>
@@ -518,7 +518,7 @@ export default function Home() {
                   tired.”
                 </p>
                 <div className="qwho">
-                  <img src="/avatars/w2.jpg" alt="" />
+                  <img src="/avatars/maya.jpg" alt="" />
                   <div>
                     <b>Madina</b>
                     <span>University student</span>
@@ -532,7 +532,7 @@ export default function Home() {
                   kind partners — now I speak every evening after work.”
                 </p>
                 <div className="qwho">
-                  <img src="/avatars/m1.jpg" alt="" />
+                  <img src="/avatars/liam.jpg" alt="" />
                   <div>
                     <b>Bekzod</b>
                     <span>Software engineer</span>
