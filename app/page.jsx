@@ -42,6 +42,10 @@ function StatusBar() {
 function Phone({ children, className = '' }) {
   return (
     <div className={`phone ${className}`}>
+      <span className="pbtn pbtn-mute" />
+      <span className="pbtn pbtn-volup" />
+      <span className="pbtn pbtn-voldn" />
+      <span className="pbtn pbtn-pwr" />
       <div className="screen">
         <div className="island" />
         <StatusBar />
