@@ -227,7 +227,7 @@ function ResultScreen() {
         <span className="gi">✔</span>
         <span>Good range of linking words</span>
       </div>
-      <div className="m-find" style={{ marginTop: 12 }}>
+      <div className="m-find" style={{ marginTop: 'auto' }}>
         One free mock every day
       </div>
     </div>
@@ -265,7 +265,7 @@ function MockScreen() {
         <span className="rec" />
         Recording your answer… <b>0:47</b>
       </div>
-      <div className="t-bar">
+      <div className="t-bar" style={{ marginTop: 12 }}>
         <div className="side">⏸</div>
         <div className="mic">🎙</div>
         <div className="side">➔</div>
